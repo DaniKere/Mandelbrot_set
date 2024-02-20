@@ -412,20 +412,8 @@ namespace mandi_practice
 
 
                     while (k <= toDolist.Length - 1)
-                    {
-                        
-
-                        toDolist[k] = Task.Factory.StartNew(() =>
-                        {
-
-
-
-
-                            copy(M, *iterPointer, *++iterPointer, a);
-
-
-
-                        });
+                    {   
+                        toDolist[k] = Task.Factory.StartNew(() => copy(M, *iterPointer, *++iterPointer, a));
                         k++;
                     }
 
